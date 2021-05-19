@@ -9,9 +9,6 @@ jobs:
       default_branch:
         type: string
         default: main
-      semgrep_deployment_id:
-        type: integer
-        default: SEMGREP_DEPLOYMENT_ID
     environment:
       SEMGREP_REPO_NAME: << parameters.repo_path >>
       SEMGREP_REPO_URL: << pipeline.project.git_url >>
