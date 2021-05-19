@@ -24,7 +24,7 @@ jobs:
           name: "Semgrep scan"
           command: |
             semgrep-agent \
-              --publish-deployment << parameters.semgrep_deployment_id >> \
+              --publish-deployment $SEMGREP_DEPLOYMENT_ID \
               --publish-token $SEMGREP_APP_TOKEN \
               --baseline-ref << parameters.default_branch >>
   build:
